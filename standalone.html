@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p1>Value:</p1>
+    <input id="value" type="number">
+    <br>
+    <input type="range" max="100" min="0" value="50" id="percentage">
+    <p1 id="sliderval"></p1>
+    <br>
+    <p2 id="result"></p2>
+    <script>
+        let percentage = document.getElementById("percentage");
+let sliderValue = document.getElementById("sliderval");
+let result = document.getElementById("result");
+let value = document.getElementById("value");
+let calc1;
+let calc2;
+
+loop()
+
+function loop(){
+    console.log(percentage.value);
+    sliderValue.innerHTML = percentage.value + "%";
+    calc1 = value.value / 100;
+    calc2 = calc1 * percentage.value;
+    result.innerHTML = "Result: " + calc2
+    
+    
+    setTimeout(loop, 100);
+}
+    </script>
+    <style>
+        div.zoomed { 
+    zoom: 3; 
+    -moz-transform: scale(3); 
+    -moz-transform-origin: 0 0;
+} 
+    </style>
+</body>
+
+</html>
