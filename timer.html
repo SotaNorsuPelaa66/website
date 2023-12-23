@@ -22,7 +22,7 @@ const myLoop = (terminator = false) => {
     if (terminator) {
         clearTimeout(timeoutvar);
     } else {
-    timeoutvar = setTimeout(myLoop, 10);
+    timeoutvar = setTimeout(myLoop, 1);
     raw = raw + 1;
     seconds = raw / 1000;
     minutes = Math.round(seconds / 60);
