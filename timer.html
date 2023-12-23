@@ -22,9 +22,9 @@ const myLoop = (terminator = false) => {
     if (terminator) {
         clearTimeout(timeoutvar);
     } else {
-    timeoutvar = setTimeout(myLoop, 1);
+    timeoutvar = setTimeout(myLoop, 1000);
     raw = raw + 1;
-    seconds = raw / 1000;
+    seconds = raw;
     minutes = Math.round(seconds / 60);
     hours = Math.round(minutes) / 60;
 
